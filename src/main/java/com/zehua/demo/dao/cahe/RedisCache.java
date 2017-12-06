@@ -1,7 +1,7 @@
 package com.zehua.demo.dao.cahe;
 
 
-import com.zehua.demo.Util.ApplicationContextHolder;
+import com.zehua.demo.util.ApplicationContextHolder;
 import org.apache.ibatis.cache.Cache;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
