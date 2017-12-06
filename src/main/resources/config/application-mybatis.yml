@@ -1,0 +1,8 @@
+
+# mybatis配置
+mybatis:
+  # 配置映射类所在包名
+  type-aliases-package: com.zehua.demo.dao
+  # 配置mapper xml文件所在路径
+  mapper-locations:  classpath:mappers/*.xml
+

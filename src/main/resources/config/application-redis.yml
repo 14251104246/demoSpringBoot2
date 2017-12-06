@@ -1,0 +1,12 @@
+  #用做二级缓存
+  redis:
+    host: r-wz9f8067136e9c74.redis.rds.aliyuncs.com
+    port: 6379
+    database: DB0
+    pool:
+      max-idle: 1024
+      min-idle: 0
+      max-active: 1024
+      max-wait: 1024
+    password: Qq523786283
+
