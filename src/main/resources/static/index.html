@@ -17,6 +17,8 @@
                 text = text + users[index].id + "--" + users[index].name + "\n";
             }
             alert(text);
+            document.getElementById("uid").value = "";
+            document.getElementById("uname").value = "";
         }
 
         $(document).ready(function () {
@@ -64,11 +66,10 @@
 
             $("#allUser").click(function () {
                 var s = document.getElementById("host").value;
-                $.get("http://" + s + "/allUser/", function (users, status) {
-                    showAll(users);
-                    document.getElementById("uid").value = "";
-                    document.getElementById("uname").value = "";
-                });
+                $.get(
+                    "http://" + s + "/allUser/", function (users, status) {
+                        showAll(users);
+                    });
 
             });
         });

@@ -1,25 +1,20 @@
 package com.zehua.demo.dao;
 
-import com.zehua.demo.common.BaseDao;
+
 import com.zehua.demo.domain.User;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
 @Mapper
-public interface UserDao extends BaseDao<User> {
+public interface UserDao {
+    User selectById(int id);
 
-    public User selectById(int id);
+    List<User> allUser();
 
+    int insertUser(User user);
 
-    public List<User> allUser();
+    void deleteUserById(int id);
 
-
-    public int insertUser(User user);
-
-
-    public void deleteUserById(int id);
-
-
-    public void updateUser(User user);
+    void updateUser(User user);
 }
