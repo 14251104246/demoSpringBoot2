@@ -8,15 +8,15 @@
     <cache type="com.zehua.demo.dao.cahe.RedisCache"/>
 
     <select id="selectById" resultType="com.zehua.demo.domain.User">
-        select * from user where id = #{id}
+        select * from User where id = #{id}
     </select>
 
     <select id="allUser" resultType="com.zehua.demo.domain.User">
-        select * from user
+        select * from User
     </select>
 
     <insert id="insertUser" parameterType="com.zehua.demo.domain.User" flushCache="true" useGeneratedKeys="true" keyProperty="User.id">
-        insert into User(name) values(#{name})
+        insert into User(id,name) values(#{id},#{name})
     </insert>
 
 

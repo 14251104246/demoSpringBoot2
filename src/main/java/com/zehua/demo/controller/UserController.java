@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
+import java.util.Random;
 
 @RestController
 public class UserController {
@@ -23,11 +24,12 @@ public class UserController {
             produces = {"application/json;charset=UTF-8"})
     public List<User> addUser(@PathVariable("userName") String userName){
         User user = new User();
+        user.setId((int) System.currentTimeMillis());
         user.setName(userName);
 
         userDao.insertUser(user);
 
-        System.out.println("/addUser");
+        System.out.println("/addUser:"+user.getId());
 
         return allUsers();
     }

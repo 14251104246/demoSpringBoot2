@@ -17,9 +17,9 @@ spring:
   #profiles: prod
   datasource:
     driverClass: com.alibaba.druid.pool.DruidDataSource #druid数据源
-    url: jdbc:mysql://rm-wz9ri9uo66o0unxu9o.mysql.rds.aliyuncs.com:3306/demo?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    url: jdbc:mysql://localhost:3306/springBootDemo?useUnicode=true&characterEncoding=UTF-8&useSSL=false
     driverClassName: com.mysql.jdbc.Driver
     username: root
-    password: Qq523786283
+    password: 123456
 
 
